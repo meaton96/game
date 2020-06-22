@@ -1,20 +1,20 @@
 package entities;
 
 import items.*;
-import lombok.AllArgsConstructor;
+import javafx.scene.image.Image;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import resource.Resource;
 import spells.Spell;
-import spells.StatusEffect;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = true)
-public class Player extends Entity{
+public class Player extends Entity {
 
     private Chest equippedChest;
     private Helm equippedHelm;
@@ -23,13 +23,13 @@ public class Player extends Entity{
 
     private Weapon equippedWeapon;
 
-    private ArrayList<Item> backPack;
-    private ArrayList<Spell> equippedSpells;
-    private ArrayList<Spell> learnedSpells;
+    private List<Item> backPack;
+    private List<Spell> equippedSpells;
+    private List<Spell> learnedSpells;
     private Resource resource;
 
-    public Player(Chest chest, Helm helm, Legs legs, Boots boots, Weapon weapon, int health, String name, Class chosenClass) {
-        super(chosenClass, name, health, health, new StatusEffect(StatusEffect.Type.NONE, 0));
+    public Player(Chest chest, Helm helm, Legs legs, Boots boots, Weapon weapon, int health, String name, Class chosenClass, Image model) {
+        super(chosenClass, name, health, health, null, model);
         equippedBoots = boots;
         equippedChest = chest;
         equippedHelm = helm;
@@ -51,7 +51,7 @@ public class Player extends Entity{
                 resource = new Resource(Resource.Type.RAGE);
                 break;
             default:
-            break;
+                break;
         }
 
     }

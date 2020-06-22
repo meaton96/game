@@ -1,15 +1,13 @@
 package entities;
 
+import javafx.scene.image.Image;
 import lombok.*;
-import spells.Spell;
 import spells.StatusEffect;
-
-import java.util.List;
 
 @AllArgsConstructor
 @Getter
 @Setter
-@NoArgsConstructor
+@RequiredArgsConstructor
 @EqualsAndHashCode
 public abstract class Entity {
 
@@ -18,9 +16,11 @@ public abstract class Entity {
         MAGE,
         WARRIOR
     }
-    private Class entityClass;
-    private String name;
+
+    private final Class entityClass;
+    private final String name;
     private int curHealth, maxHealth;
     private StatusEffect statusEffect;
+    private final Image model;
 
 }

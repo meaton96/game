@@ -1,12 +1,13 @@
 package spells;
 
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
-import lombok.RequiredArgsConstructor;
 import lombok.Value;
 import lombok.experimental.NonFinal;
 
 @Value
 @EqualsAndHashCode
+@Builder
 @NonFinal
 public class Spell {
 

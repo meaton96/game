@@ -1,0 +1,13 @@
+#hills_battle{
+    -fx-background-image: url("res/hills.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 900 450;
+    -fx-background-position: center center;
+}
+
+#main_menu{
+    -fx-background-image: url("res/menuBackground.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 900 450;
+    -fx-background-position: center center;
+}
