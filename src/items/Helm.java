@@ -5,7 +5,9 @@ import lombok.EqualsAndHashCode;
 
 
 @EqualsAndHashCode(callSuper = true)
+
 public class Helm extends Armor {
+
     @Builder
     public Helm(String name, double weight, double durability, int level, double armor, Type type,
                 int stamina, int strength, int agility, int intellect) {

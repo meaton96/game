@@ -26,4 +26,16 @@ public abstract class Armor extends Item {
     private final Type type;
     private final int stamina, strength, agility, intellect;
 
+    public static Type getType(int typeNum) {
+        switch (typeNum) {
+            case 1:
+                return Type.CLOTH;
+            case 2:
+                return Type.LEATHER;
+            case 3:
+                return Type.PLATE;
+            default:
+                return null;
+        }
+    }
 }

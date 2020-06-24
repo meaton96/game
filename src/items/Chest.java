@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
+
 public class Chest extends Armor {
 
     @Builder

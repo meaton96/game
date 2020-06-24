@@ -2,6 +2,7 @@ package entities;
 
 import items.*;
 import javafx.scene.image.Image;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,6 +15,7 @@ import java.util.List;
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = true)
+
 public class Player extends Entity {
 
     private Chest equippedChest;
@@ -28,6 +30,7 @@ public class Player extends Entity {
     private List<Spell> learnedSpells;
     private Resource resource;
 
+    @Builder
     public Player(Chest chest, Helm helm, Legs legs, Boots boots, Weapon weapon, int health, String name, Class chosenClass, Image model) {
         super(chosenClass, name, health, health, null, model);
         equippedBoots = boots;

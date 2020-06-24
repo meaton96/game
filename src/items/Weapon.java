@@ -6,6 +6,7 @@ import lombok.experimental.NonFinal;
 
 @EqualsAndHashCode(callSuper = true)
 @NonFinal
+
 public class Weapon extends Item {
 
     @Builder
@@ -30,5 +31,18 @@ public class Weapon extends Item {
     private final double damageLow, damageHigh;
     private final Type type;
     private final int agility, stamina, strength, intellect;
+
+    public static Type getType(int typeNum) {
+        switch (typeNum) {
+            case 1:
+                return Type.STAFF;
+            case 2:
+                return Type.DAGGER;
+            case 3:
+                return Type.SWORD;
+            default:
+                return null;
+        }
+    }
 
 }

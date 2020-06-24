@@ -4,7 +4,9 @@ import lombok.Builder;
 import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
+
 public class Boots extends Armor {
+
     @Builder
     public Boots(String name, double weight, double durability, int level, double armor, Type type,
                  int stamina, int strength, int agility, int intellect) {
