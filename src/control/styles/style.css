@@ -4,7 +4,6 @@
     -fx-background-size: 1440 810;
     -fx-background-position: center center;
 }
-
 #main_menu {
     -fx-background-image: url("res/images/menuBackground.png");
     -fx-background-repeat: no-repeat;
@@ -24,6 +23,7 @@
 #start_button:hover {
     -fx-background-image: url("res/images/start_button_highlight.png");
 }
+
 
 
 
